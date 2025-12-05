@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel98 Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Retro Window Container -->
+    <div class="window-frame">
+
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-text">Pixel98 Studio.exe</div>
+            <div class="title-controls">
+                <div class="win-btn">_</div>
+                <div class="win-btn">[]</div>
+                <div class="win-btn">X</div>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="resize-control">
+                <label for="size-slider">Size: <span id="size-value">16</span></label>
+                <input type="range" id="size-slider" min="2" max="64" value="16" step="1">
+            </div>
+            <button id="clear-btn">Edit: Clear Canvas</button>
+            <div class="separator"></div>
+            <!-- Color Controls -->
+            <div class="color-controls">
+                <input type="color" id="color-picker" value="#000000" title="Custom Color">
+                <div class="preset-colors">
+                    <button class="color-btn" data-color="#FF0000" style="background-color: #FF0000;"
+                        title="Red"></button>
+                    <button class="color-btn" data-color="#0000FF" style="background-color: #0000FF;"
+                        title="Blue"></button>
+                    <button class="color-btn" data-color="#008000" style="background-color: #008000;"
+                        title="Green"></button>
+                    <button class="color-btn" data-color="#FFFF00" style="background-color: #FFFF00;"
+                        title="Yellow"></button>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <button onclick="setColor('black')">⚫ Ink</button>
+            <button onclick="setRainbow()" style="color: purple; font-weight:bold;">✨ Magic</button>
+            <button onclick="setColor('white')">⬜ Eraser</button>
+        </div>
+
+        <!-- Drawing Area -->
+        <div id="grid-container"></div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span id="status-text">Ready. Memory: 64MB OK.</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

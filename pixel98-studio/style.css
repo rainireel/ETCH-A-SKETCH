@@ -1,0 +1,181 @@
+:root {
+    --win-grey: #c0c0c0;
+    --win-blue: #000080;
+    --win-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #008080;
+    /* Teal Desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Tahoma', sans-serif;
+    /* Use a retro cursor image if available, else standard */
+    cursor: default;
+}
+
+.window-frame {
+    background-color: var(--win-grey);
+    width: 980px;
+    padding: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+}
+
+.title-bar {
+    background: linear-gradient(90deg, var(--win-blue), #1084d0);
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.title-text {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.title-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.win-btn {
+    width: 16px;
+    height: 14px;
+    background: var(--win-grey);
+    border: 1px solid white;
+    border-right-color: black;
+    border-bottom-color: black;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #808080;
+}
+
+button {
+    background: var(--win-grey);
+    border: 1px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:active {
+    border: 1px solid #404040;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: translate(1px, 1px);
+}
+
+.resize-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.resize-control input[type=range] {
+    width: 100px;
+    cursor: pointer;
+}
+
+.separator {
+    width: 10px;
+    border-left: 1px solid #808080;
+    border-right: 1px solid white;
+}
+
+#grid-container {
+    width: 960px;
+    height: 960px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    /* CRITICAL FOR FLEXBOX GRID */
+    border: 2px solid #808080;
+    border-right-color: white;
+    border-bottom-color: white;
+    cursor: crosshair;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: white;
+    /* No border on items to ensure perfect fit without complex calc() */
+}
+
+.status-bar {
+    margin-top: 8px;
+    border: 1px solid #808080;
+    border-bottom-color: white;
+    border-right-color: white;
+    padding: 2px 6px;
+    font-size: 11px;
+    color: #404040;
+}
+
+/* Color Picker Styling */
+.color-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#color-picker {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.preset-colors {
+    display: flex;
+    gap: 2px;
+}
+
+.color-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    min-width: 0;
+    border: 1px solid white;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    cursor: pointer;
+}
+
+.color-btn:active {
+    border: 1px solid #404040;
+    border-right-color: white;
+    border-bottom-color: white;
+}
